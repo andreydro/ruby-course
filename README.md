@@ -8,4 +8,8 @@ Lesson 3: done
 
 Lesson 4: done
 
-Lesson 5: in progress...
+Lesson 5: done
+
+Lesson 6: done
+
+Lesson 7: in progress...
