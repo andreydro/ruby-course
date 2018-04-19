@@ -3,10 +3,7 @@ class Station
 
   def initialize(name)
     @name = name
-    @trains = {
-    	cargo: [],
-    	passenger: []
-    }
+    @trains = []
   end
 
   def trains_type
@@ -132,7 +129,6 @@ class Train
   	if @speed.zero? && @wagons > 0
   		@wagons -= 1
   	else
-  		puts "It's inspossible. The train is moving or wagons left"
-  	end
+  		puts "It's inspossible. The train is moving or"
   end
 end
