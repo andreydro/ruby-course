@@ -1,24 +1,20 @@
 class Station
-  attr_reader :name, :trains
+  attr_accessor :name, :trains
 
-  def initialize(station)
+  def initialize(name)
     @name = name
     @trains = []
   end
 
-  def arrive(train)
-    @trains.push(train)
+  def trains_type
+  	@trains.each { |train| puts "#{train.type} - #{train.number}"}
   end
 
-  def departure(train)
-  	@trains.delete(train)
+  def get_train(train)
+  	@trains.push(train)
   end
 
-  def show_parked_trains
-    @trains	
-  end
-
-  def show_type_of_train(type)
-  	trains.count { |train| train.type == type }
+  def send_train(train)
+  	@trains[train.type.to_sym].delete(train)
   end
 end
