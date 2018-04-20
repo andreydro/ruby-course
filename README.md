@@ -16,4 +16,6 @@ Lesson 7: done
 
 Lesson 8: done
 
-Lesson 9: in progress...
+Lesson 9: done
+
+Lesson 10: in progress...
