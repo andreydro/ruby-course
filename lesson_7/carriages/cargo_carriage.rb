@@ -1,5 +1,4 @@
 class CargoCarriage < Carriage
-  
   CARGO_UNITS = 6000
 
   def initialize

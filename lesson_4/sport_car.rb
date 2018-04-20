@@ -1,8 +1,8 @@
 class SportCar < Car
   def start_engine
-    puts "Click!"
+    puts 'Click!'
     super
-    puts "Wroomm!"
+    puts 'Wroomm!'
   end
 
   private

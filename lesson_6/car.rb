@@ -2,7 +2,7 @@ class Car
   attr_reader :current_rpm
   attr_accessor :number
 
-  NUMBER_FORMAT = /^[а-яА-Я]{1}\d{3}[а-яА-Я]{2}$/ 
+  NUMBER_FORMAT = /^[а-яА-Я]{1}\d{3}[а-яА-Я]{2}$/
 
   @@instances = 0
 
@@ -27,7 +27,7 @@ class Car
 
   def valid?
     validate!
-  rescue
+  rescue StandardError
     false
   end
 
@@ -37,8 +37,8 @@ class Car
 
   def validate!
     raise "Number can't be nill" if number.nil?
-    raise "Number should be at least 6 symbols" if number.length < 6
-    raise "Number has invalid format" if number !~ NUMBER_FORMAT
+    raise 'Number should be at least 6 symbols' if number.length < 6
+    raise 'Number has invalid format' if number !~ NUMBER_FORMAT
     true
   end
 

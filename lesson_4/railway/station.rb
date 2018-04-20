@@ -7,14 +7,14 @@ class Station
   end
 
   def trains_type
-  	@trains.each { |train| puts "#{train.type} - #{train.number}"}
+    @trains.each { |train| puts "#{train.type} - #{train.number}" }
   end
 
   def get_train(train)
-  	@trains.push(train)
+    @trains.push(train)
   end
 
   def send_train(train)
-  	@trains[train.type.to_sym].delete(train)
+    @trains[train.type.to_sym].delete(train)
   end
 end

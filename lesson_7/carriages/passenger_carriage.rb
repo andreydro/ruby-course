@@ -1,5 +1,4 @@
 class PassengerCarriage < Carriage
-
   PASSENGER_UNITS = 60
 
   def initialize

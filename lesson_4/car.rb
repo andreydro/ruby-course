@@ -16,7 +16,7 @@ class Car
   private
 
   attr_writer :current_rpm
-   
+
   def initial_rpm
     700
   end

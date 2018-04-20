@@ -1,5 +1,5 @@
-require_relative "modules/instance_counter"
-require_relative "modules/valid"
+require_relative 'modules/instance_counter'
+require_relative 'modules/valid'
 
 class Station
   include InstanceCounter
@@ -26,21 +26,21 @@ class Station
   end
 
   def trains_type
-  	@trains.each { |train| puts "#{train.type} - #{train.number}"}
+    @trains.each { |train| puts "#{train.type} - #{train.number}" }
   end
 
   def get_train(train)
-  	@trains.push(train)
+    @trains.push(train)
   end
 
   def send_train(train)
-  	@trains[train.type.to_sym].delete(train)
+    @trains[train.type.to_sym].delete(train)
   end
 
   protected
 
-    def validate!
-      raise "Station name should be longer that two characters" if name.length < 2
-      raise "Station name must consist of letters." if name !~ NAME_FORMAT
-    end
+  def validate!
+    raise 'Station name should be longer that two characters' if name.length < 2
+    raise 'Station name must consist of letters.' if name !~ NAME_FORMAT
+  end
 end

@@ -1,7 +1,6 @@
 class Truck < Car
-  def loading
-  end
-  
+  def loading; end
+
   private
 
   def initial_rpm

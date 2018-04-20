@@ -6,7 +6,7 @@
 #   puts "Error"
 #   raise
 # rescue NoMemoryError => e
-# 	puts "No memory!!!"
+#   puts "No memory!!!"
 # end
 
 # puts "After exception"
@@ -17,9 +17,9 @@
 # end
 
 # begin
-# 	method_with_error
+#   method_with_error
 # rescue RuntimeError => e
-# 	puts e.inspect
+#   puts e.inspect
 # end
 
 # puts "after exception"
@@ -29,23 +29,23 @@
 #  sqrt = Math.sqrt(value)
 #  puts sqrt
 # rescue StandardError
-# 	puts "Wrong value"
+#   puts "Wrong value"
 # end
 
 # sqrt(-1)
 #------------------------------
 
 def connect_to_wikipedia
-  raise "Connection error"
+  raise 'Connection error'
 end
 
 attempt = 0
 begin
-	connect_to_wikipedia
-rescue  => RuntimeError
-	attempt += 1
-	#puts "Check your connection"
-	retry if attempt < 3
+  connect_to_wikipedia
+rescue StandardError => RuntimeError
+  attempt += 1
+  # puts "Check your connection"
+  retry if attempt < 3
 ensure
-		puts "There was #{attempt} attempts"
+  puts "There was #{attempt} attempts"
 end

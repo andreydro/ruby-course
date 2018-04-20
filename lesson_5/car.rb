@@ -1,20 +1,21 @@
-module  FuelTank
+module FuelTank
   def fill_tank(level)
     self.fuel_tank = level
   end
 
   def fuel_level
-    self.fuel_tank
+    fuel_tank
   end
 
   protected
+
   attr_accessor :fuel_tank
 end
 
 module Debugger
   def self.included(base)
     base.extend ClassMethods
-    base.send :include, InstanceMethods 
+    base.send :include, InstanceMethods
   end
 
   module ClassMethods
@@ -46,12 +47,12 @@ class Car
     @@instances
   end
 
-  debug "Start interface"
+  debug 'Start interface'
 
   def initialize
     @current_rpm = 0
     @@instances += 1
-    debug "initialize"
+    debug 'initialize'
   end
 
   def start_engine
@@ -62,7 +63,7 @@ class Car
     current_rpm.zero?
   end
 
-  debug "End interface"
+  debug 'End interface'
 
   protected
 
@@ -80,7 +81,7 @@ end
 
 class MotorBike
   include FuelTank
-  include Debugger 
+  include Debugger
 
-  debug "MotorBike class"
+  debug 'MotorBike class'
 end
